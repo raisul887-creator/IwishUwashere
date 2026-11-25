@@ -15,7 +15,7 @@ export function Footer({ onOpenEstimator }: FooterProps) {
             <div className="flex items-center gap-2.5">
               <BrandMarkIcon className="w-5 h-5 text-[#F7F6F2]" />
               <span className="font-[var(--font-display)] text-base font-extrabold tracking-[-0.02em]">
-                I WISH UWASH HERE
+                I WISH U WASH HERE
               </span>
             </div>
             <p className="mt-3 font-[var(--font-display)] text-xl font-bold text-[#F7F6F2] tracking-[0.01em]">
@@ -88,10 +88,10 @@ export function Footer({ onOpenEstimator }: FooterProps) {
             Disclaimer Perencanaan Bisnis: Seluruh angka harga paket, kuota cuci,
             estimasi waktu antre (30–60 menit), siklus pencucian (1–2 minggu), profil
             persona, serta poin analisis SWOT pada halaman ini merupakan asumsi studi
-            perencanaan usaha I Wish UWash Here.
+            perencanaan usaha I Wish U Wash Here.
           </p>
           <p className="whitespace-nowrap shrink-0 text-[#B8C4C9]">
-            &copy; {new Date().getFullYear()} I Wish UWash Here · Banda Aceh
+            &copy; {new Date().getFullYear()} I Wish U Wash Here · Banda Aceh
           </p>
         </div>
       </div>

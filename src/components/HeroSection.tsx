@@ -69,7 +69,7 @@ export function HeroSection({ onOpenEstimator }: HeroSectionProps) {
               {!imageError ? (
                 <img
                   src={HERO_IMAGE_PATH}
-                  alt="Kendaraan roda empat menjalani pencucian snow foam bertekanan di studio carwash modern I Wish UWash Here Banda Aceh"
+                  alt="Kendaraan roda empat menjalani pencucian snow foam bertekanan di studio carwash modern I Wish U Wash Here Banda Aceh"
                   referrerPolicy="no-referrer"
                   onError={() => setImageError(true)}
                   className="w-full h-full object-cover object-center"
@@ -78,7 +78,7 @@ export function HeroSection({ onOpenEstimator }: HeroSectionProps) {
                 <div className="w-full h-full min-h-[320px] flex flex-col items-center justify-center p-8 bg-gradient-to-br from-[#111619] via-[#19262C] to-[#0E6B7E]/40 text-[#F7F6F2]">
                   <BrandMarkIcon className="w-10 h-10 text-[#F7F6F2] mb-4" />
                   <p className="font-[var(--font-display)] text-lg font-bold tracking-tight">
-                    I Wish UWash Here
+                    I Wish U Wash Here
                   </p>
                   <p className="text-xs text-[#C7D0D5] mt-1">
                     Studio Carwash Keanggotaan · Banda Aceh

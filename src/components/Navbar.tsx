@@ -22,11 +22,11 @@ export function Navbar({ onOpenEstimator }: NavbarProps) {
         <a
           href="#top"
           className="flex items-center gap-2.5 text-[#111619] whitespace-nowrap shrink-0 group"
-          aria-label="I Wish UWash Here — Banda Aceh"
+          aria-label="I Wish U Wash Here — Banda Aceh"
         >
           <BrandMarkIcon className="w-5 h-5 text-[#111619] shrink-0" />
           <span className="font-[var(--font-display)] font-extrabold tracking-[-0.02em] text-[15px] sm:text-base">
-            I WISH UWASH HERE
+            I WISH U WASH HERE
           </span>
           <span
             className="hidden sm:inline text-[#E2DFD7] select-none"

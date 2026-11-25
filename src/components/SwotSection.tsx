@@ -69,7 +69,7 @@ export function SwotSection() {
         {/* Study Assumption Note */}
         <p className="mt-5 text-xs leading-relaxed text-[#525C62]">
           Catatan: Seluruh poin analisis SWOT di atas disusun sebagai asumsi studi dan
-          dasar perencanaan bisnis I Wish UWash Here.
+          dasar perencanaan bisnis I Wish U Wash Here.
         </p>
       </div>
     </section>

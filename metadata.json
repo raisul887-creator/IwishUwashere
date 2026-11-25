@@ -1,6 +1,8 @@
 {
-  "name": "I Wish UWash Here",
+  "name": "I Wish U Wash Here",
   "description": "Carwash berbasis keanggotaan di Banda Aceh — Wish Bersih? Wash di Sini. Harga pasti bulanan, jalur antre prioritas, dan perawatan rutin kendaraan roda empat.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

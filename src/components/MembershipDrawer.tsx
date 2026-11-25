@@ -75,7 +75,7 @@ export function MembershipDrawer({
     const cleanNotes = notes.trim();
 
     const lines = [
-      'Halo tim I Wish UWash Here Banda Aceh,',
+      'Halo tim I Wish U Wash Here Banda Aceh,',
       'Saya ingin mendaftar / simulasi membership carwash bulanan:',
       '',
       `• Nama: ${cleanName}`,
@@ -487,7 +487,7 @@ export function MembershipDrawer({
 
           <p className="text-[11px] leading-relaxed text-[#525C62]">
             Formulir ini menghasilkan draf pesan WhatsApp untuk simulasi pendaftaran
-            keanggotaan I Wish UWash Here Banda Aceh. Tarif yang tertera bersifat
+            keanggotaan I Wish U Wash Here Banda Aceh. Tarif yang tertera bersifat
             estimasi perencanaan bisnis.
           </p>
         </form>
