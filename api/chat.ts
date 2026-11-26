@@ -11,7 +11,7 @@ interface VercelRes {
 
 const MAX_MESSAGE_LENGTH = 1000;
 const WEBHOOK_TIMEOUT_MS = 25000;
-const DEFAULT_N8N_WEBHOOK_URL = 'https://raisul887.app.n8n.cloud/webhook/ai-agent';
+const DEFAULT_N8N_WEBHOOK_URL = "https://n8n-n8n.imduao.easypanel.host/webhook/c3020f63-7a41-4d11-8e10-27fd0dfd71f9";
 
 function isPrivateOrBlockedHost(hostname: string): boolean {
   const host = hostname.toLowerCase().replace(/^\[|\]$/g, '');
