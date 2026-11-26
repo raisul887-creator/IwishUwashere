@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Footer } from './components/Footer';
 import { HeroSection } from './components/HeroSection';
 import { MembershipDrawer } from './components/MembershipDrawer';
+import { N8nChatbot } from './components/N8nChatbot';
 import { Navbar } from './components/Navbar';
 import { PricingSection } from './components/PricingSection';
 import { ProblemValueSection } from './components/ProblemValueSection';
@@ -56,6 +57,8 @@ export default function App() {
         initialSlot={selectedSlot}
         onClose={() => setDrawerOpen(false)}
       />
+
+      <N8nChatbot onOpenEstimator={handleOpenEstimator} />
     </div>
   );
 }

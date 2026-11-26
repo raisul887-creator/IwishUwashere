@@ -228,3 +228,59 @@ export function BrandMarkIcon({ className = 'w-5 h-5' }: IconProps) {
     </svg>
   );
 }
+
+export function ChatIcon({ className = 'w-4 h-4' }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M4 5h16v11H9l-5 4V5z" />
+      <path d="M8.5 9.5h7" />
+      <path d="M8.5 12.5h4.5" />
+    </svg>
+  );
+}
+
+export function SendIcon({ className = 'w-4 h-4' }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M21 12L4 4l3.2 8L4 20l17-8z" />
+      <path d="M7.2 12H14" />
+    </svg>
+  );
+}
+
+export function RefreshIcon({ className = 'w-4 h-4' }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M20 11a8 8 0 1 0 2 5.3" />
+      <path d="M20 4v7h-7" />
+    </svg>
+  );
+}
+
