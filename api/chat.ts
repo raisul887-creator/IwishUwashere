@@ -11,7 +11,8 @@ interface VercelRes {
 
 const MAX_MESSAGE_LENGTH = 1000;
 const WEBHOOK_TIMEOUT_MS = 25000;
-const DEFAULT_N8N_WEBHOOK_URL = "https://n8n-n8n.imduao.easypanel.host/webhook/c3020f63-7a41-4d11-8e10-27fd0dfd71f9";
+const DEFAULT_N8N_WEBHOOK_URL =
+  'https://n8n-n8n.lmduao.easypanel.host/webhook/c3020f63-7a41-4d11-8e10-27fd0dfd71f9';
 
 function isPrivateOrBlockedHost(hostname: string): boolean {
   const host = hostname.toLowerCase().replace(/^\[|\]$/g, '');
@@ -83,6 +84,8 @@ function extractReplyFromPayload(payload: unknown): string | null {
       'response',
       'answer',
       'content',
+      'balasan',
+      'jawaban',
     ];
     for (const key of candidateKeys) {
       const value = record[key];
@@ -90,8 +93,16 @@ function extractReplyFromPayload(payload: unknown): string | null {
         return value.trim().slice(0, 4000);
       }
     }
+    if (record.json && typeof record.json === 'object') {
+      return extractReplyFromPayload(record.json);
+    }
     if (record.data && typeof record.data === 'object') {
       return extractReplyFromPayload(record.data);
+    }
+    for (const value of Object.values(record)) {
+      if (typeof value === 'string' && value.trim().length > 0) {
+        return value.trim().slice(0, 4000);
+      }
     }
   }
 
@@ -213,6 +224,8 @@ export default async function handler(req: VercelReq, res: VercelRes) {
         sessionId,
         chatInput: rawMessage,
         message: rawMessage,
+        text: rawMessage,
+        query: rawMessage,
         source: 'iwish-uwash-here-web',
         location: 'Banda Aceh',
         timestamp: new Date().toISOString(),
@@ -225,6 +238,14 @@ export default async function handler(req: VercelReq, res: VercelRes) {
     if (!upstream.ok) {
       res.status(502).json({
         error: `Webhook n8n merespons dengan status ${upstream.status}. Pastikan workflow aktif dan node Respond to Webhook terkonfigurasi.`,
+      });
+      return;
+    }
+
+    if (!rawText.trim()) {
+      res.status(502).json({
+        error:
+          'Webhook n8n menerima pesan (HTTP 200), namun mengembalikan body kosong. Di n8n, atur node Webhook ke "Respond: Using Respond to Webhook Node" atau "When Last Node Finishes" agar teks balasan dikirim kembali.',
       });
       return;
     }
@@ -242,7 +263,7 @@ export default async function handler(req: VercelReq, res: VercelRes) {
     if (!reply) {
       res.status(502).json({
         error:
-          'Webhook n8n berhasil dihubungi, namun tidak mengembalikan teks balasan (field reply/output/message/text).',
+          'Webhook n8n berhasil dihubungi, namun tidak mengembalikan teks balasan (field output/reply/message/text).',
       });
       return;
     }
