@@ -10,9 +10,9 @@ const __dirname = path.dirname(__filename);
 const PORT = Number(process.env.PORT) || 3000;
 const IS_PROD = process.env.NODE_ENV === 'production';
 const MAX_MESSAGE_LENGTH = 1000;
-const WEBHOOK_TIMEOUT_MS = 25000;
+const WEBHOOK_TIMEOUT_MS = 45000;
 const DEFAULT_N8N_WEBHOOK_URL =
-  'https://n8n-n8n.lmduao.easypanel.host/webhook-test/wish-uwash-chat';
+  'https://n8n-n8n.lmduao.easypanel.host/webhook/wish-uwash-chat';
 
 function isPrivateOrBlockedHost(hostname: string): boolean {
   const host = hostname.toLowerCase().replace(/^\[|\]$/g, '');
